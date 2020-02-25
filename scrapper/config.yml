@@ -1,0 +1,39 @@
+local: 
+  URL_LIST: ['https://www.amazon.com/dp/B00125Q75Y']
+  BOOTSTRAP_SERVERS: ['localhost:9092']
+  VALUE_SERIALIZER: 'lambda m: json.dumps(m).encode("utf-8")'
+  VALUE_DESERIALIZER: 'lambda m: json.loads(m.decode("utf-8")'
+  SQL_ENGINE: 'mysql+pymysql://root:root@localhost:3306/amzorbit?charset=utf8'
+  AWS_ACCESS_KEY_ID: 'AKIAIAARGBPIYQFP6KRQ'
+  AWS_SECRET_ACCESS_KEY: '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'
+  AWS_REGION_NAME: 'us-east-1'
+  SCHEDULER_INTERVEL: 3600
+  APP_HOST: '0.0.0.0'
+  APP_PORT: 8082
+
+dev:
+  URL_LIST: ['https://www.amazon.com/dp/B00125Q75Y']
+  BOOTSTRAP_SERVERS: ['localhost:9092']
+  VALUE_SERIALIZER: 'lambda m: json.dumps(m).encode("utf-8")'
+  VALUE_DESERIALIZER: 'lambda m: json.loads(m.decode("utf-8")'
+  SQL_ENGINE: 'mysql+pymysql://amzorbit_dev58:productlove1@amzorbit-dev.ce2rueiso8h7.us-east-1.rds.amazonaws.com:3306/amzorbit?charset=utf8'
+  AWS_ACCESS_KEY_ID: 'AKIAIAARGBPIYQFP6KRQ'
+  AWS_SECRET_ACCESS_KEY: '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'
+  AWS_REGION_NAME: 'us-east-1'
+  SCHEDULER_INTERVEL: 3600
+  APP_HOST: '0.0.0.0'
+  APP_PORT: 8082
+
+prod:
+  URL_LIST: ['https://www.amazon.com/dp/B00125Q75Y']
+  BOOTSTRAP_SERVERS: ['localhost:9092']
+  VALUE_SERIALIZER: 'lambda m: json.dumps(m).encode("utf-8")'
+  VALUE_DESERIALIZER: 'lambda m: json.loads(m.decode("utf-8")'
+  SQL_ENGINE: 'mysql+pymysql://admin:adminLIL@amzorbit.czmmgvc1lzsh.us-east-2.rds.amazonaws.com:3306/amzorbit?charset=utf8'
+  AWS_ACCESS_KEY_ID: 'AKIAIAARGBPIYQFP6KRQ'
+  AWS_SECRET_ACCESS_KEY: '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'
+  AWS_REGION_NAME: 'us-east-1'
+  SCHEDULER_INTERVEL: 3600
+  APP_HOST: '0.0.0.0'
+  APP_PORT: 8082
+
